@@ -71,7 +71,6 @@ function readTheFile(basePath){
     }else{
 
     }
-       
 }
 
 readTheFile(basePath)
