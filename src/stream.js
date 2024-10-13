@@ -22,16 +22,16 @@ const readable = new stream.Readable({
 });
 
 // 创建一个写流
-// const writable = fs.createWriteStream(path.join(__dirname, 'output.txt'), {
-//     highWaterMark: 2 // Set buffer size for writing
-// });
+const writable = fs.createWriteStream(path.join(__dirname, 'output.txt'), {
+    highWaterMark: 2 // Set buffer size for writing
+});
 
-const writable = new stream.Writable({
-    highWaterMark: 2,
-    write: function (chunk, encoding, next) {
-        console.log('写入:', chunk.toString())
-    }
-})
+// const writable = new stream.Writable({
+//     highWaterMark: 2,
+//     write: function (chunk, encoding, next) {
+//         console.log('写入:', chunk.toString())
+//     }
+// })
 
 
 // 写入管道
